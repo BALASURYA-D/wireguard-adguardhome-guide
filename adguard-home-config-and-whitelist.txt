@@ -1,0 +1,89 @@
+# ==============================
+# Primary DNS-over-HTTPS (DoH)
+# ==============================
+https://family.adguard-dns.com/dns-query
+https://family.cloudflare-dns.com/dns-query
+
+# ==============================
+# Secondary DNS
+# ==============================
+quic://family.adguard-dns.com
+tls://family.adguard-dns.com
+tls://family.cloudflare-dns.com
+94.140.14.15
+1.1.1.3
+
+# ==============================
+# Bootstrap DNS
+# ==============================
+1.1.1.3:53
+
+# ==============================
+# AdGuard Home Allowlist Rules
+# Paste vào Filters → Custom rules
+# ==============================
+
+! ==== 1. Facebook / WhatsApp CORE ====
+@@||b-api.facebook.com^
+@@||b-graph.facebook.com^
+@@||b-graph-fallback.facebook.com^
+@@||graph.facebook.com^
+@@||graph-fallback.facebook.com^
+@@||edge-mqtt.facebook.com^
+@@||mqtt-mini.facebook.com^
+@@||stun.fbsbx.com^
+@@||graph.whatsapp.com^
+@@||graph.whatsapp.net^
+
+! ==== 2. Messenger & OAuth ====
+@@||messenger.com^
+@@||m.me^
+@@||msngr.com^
+@@||web.facebook.com^
+@@||web-fallback.facebook.com^
+
+! ==== 3. Cloudflare Challenge / Turnstile ====
+@@||cloudflare.com^
+@@||cdn.cloudflare.net^
+@@||ajax.cloudflare.com^
+@@||static.cloudflareinsights.com^
+@@||assets.cloudflare.com^
+@@||cdnjs.cloudflare.com^
+@@||challenge.cloudflare.com^
+@@||captcha.cloudflare.com^
+@@||challenges.cloudflare.com^
+
+! ==== Ảnh, video, tệp đính kèm ====
+@@||external.xx.fbcdn.net^
+@@||scontent.xx.fbcdn.net^
+@@||upload.facebook.com^
+@@||fbsbx.com^
+@@||star.c10r.facebook.com^
+
+! ==== Tracker / Ads (KHÔNG whitelist) ====
+||connect.facebook.net^
+||facebook-pixel.com^
+||metaads.net^
+||facebookanalytics.com^
+||doubleclick.net^
+||connect.facebook.net^$important
+
+! ==== WhatsApp CORE – API & Đăng nhập ====
+@@||graph.whatsapp.com^
+@@||graph.whatsapp.net^
+
+! ==== Messaging backend & Media CDN ====
+@@||mmg.whatsapp.net^
+@@||pps.whatsapp.net^
+@@||media.fbsbx.com^
+@@||cdn.fbsbx.com^
+
+! ==== Web / Desktop client ====
+@@||web.whatsapp.com^
+@@||dyn.whatsapp.net^
+@@||wa.me^
+
+! ==== Thoại / Video call ====
+@@||stun.fbsbx.com^
+
+@@||newguard.site
